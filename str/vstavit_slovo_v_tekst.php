@@ -1,5 +1,7 @@
 <?php
-mb_internal_encoding("UTF-8");
+/**
+* Вставка строки в текст без разрывания слов
+*/
 $text = 'aaa bbb cccc ddd';
 $string = " <b>xxx</b> ";
 $mid_pos = mb_strpos($text, ' ', rand(0,mb_strlen($text)));
