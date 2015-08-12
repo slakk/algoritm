@@ -1,4 +1,8 @@
 <?php
+/**
+* вывести php файлы из директории без _ в начале
+*/
+
 function itsPHP($filename) {
     return end(getPart($filename)) == 'php';
   }
