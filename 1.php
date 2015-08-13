@@ -13,3 +13,17 @@
  * Если есть несколько вариантов с одинаковым максимумом, можно брать любой
  *  из них.]
  */
+
+$array = [1, 5, 9, 13, 17, 2, 6, 10, 3, 7, 11, 4, 8, 12];
+$newArray;
+$i=0;
+for ($i=0; $i < 3; $i++) { 
+    foreach ($array as $key => $value) {
+        if(empty($newArray[$i]) || $newArray[$i][count($newArray[$i]) - 1] < $value){
+            $newArray[$i][] = $value;
+            unset($array[$key]);
+        }
+    }
+}
+
+var_dump($newArray);
